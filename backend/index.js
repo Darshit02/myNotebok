@@ -7,7 +7,7 @@ const port = 3000
 
 app.use(express.json())
 app.get('/', (req, res) => {
-    res.send('Hello Darshit')
+    res.send('Hello')
 })
 app.use('/api/auth', require('./routes/auth'))
 
