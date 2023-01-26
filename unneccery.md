@@ -1,3 +1,6 @@
 {
   "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjNkMGJhNzYyOWQ4MmMwOGUyYTUyMWIyIn0sImlhdCI6MTY3NDYzMTY3MH0.NRwSnUFLn-dqjhTnhE02Ikz3XjZYmFx54XHqDh1-7RM"
 }
+import { useContext } from 'react'
+import noteContext from '../context/notes/noteContext'
+ const a =useContext(noteContext)

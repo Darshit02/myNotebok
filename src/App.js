@@ -1,13 +1,27 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoteState from "./context/notes/NoteState";
 
 const App = () => {
   return (
     <>
-    <h1 className='App'> This is MY Notebook</h1>
+      <NoteState>
+        <BrowserRouter>
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </NoteState>
     </>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
