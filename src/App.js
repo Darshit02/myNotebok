@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoteState from "./context/notes/NoteState";
+import Alert from "./components/Alert";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <NoteState>
         <BrowserRouter>
           <Navbar />
+          <Alert msg ="cool"/>
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
