@@ -21,10 +21,10 @@ const Login = (props) => {
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken); 
             history("/");
+            
 
         }
         else{
-            alert("Invalid credentials");
         }
     }
 
@@ -34,6 +34,7 @@ const Login = (props) => {
 
     return (
         <div>
+            <h1 className='APP text-center my-3'>Login</h1>
             <form  onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>

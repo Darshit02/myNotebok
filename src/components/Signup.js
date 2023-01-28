@@ -2,7 +2,7 @@ import React from "react";
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Signup = () => {
+const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"",email: "", password: "" ,cpassword:""}) 
   let history = useNavigate();
 
@@ -18,12 +18,11 @@ const Signup = () => {
       });
       const json = await response.json()
       console.log(json);
-      
+    
           // Save the auth token and redirect
           localStorage.setItem('token', json.authtoken); 
           history("/");
-
-      
+          props.showAlert("Account Created " )
   }
 
     const onChange = (e)=>{
