@@ -31,6 +31,8 @@ const Addnote = () => {
               aria-describedby="emailHelp"
               onChange={onCHange}
               name="title"
+              required
+              value={note.title}
             />
           </div>
           <div className="mb-3">
@@ -43,6 +45,8 @@ const Addnote = () => {
               onChange={onCHange}
               id="description"
               name="description"
+              value={note.description}
+              required
             />
           </div>
           <div className="mb-3">
@@ -55,9 +59,12 @@ const Addnote = () => {
               onChange={onCHange}
               id="tag"
               name="tag"
+              required
+              value={note.tag}
             />
           </div>
           <button
+          disabled={note.title.length<5 ||  note.description.length<5}
             type="submit"
             className="btn btn-primary"
             onClick={handleClick}
